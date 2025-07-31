@@ -23,7 +23,7 @@ function App() {
     if (e.key === "Enter") {
       try {
         const result = await API(text); // fetch using typed value
-        settemp(result.main.temp);
+        settemp(Math.round(result.main.temp));
         if(result.sys.country){
           setcountry(`, ${result.sys.country}`);
         }
